@@ -69,7 +69,7 @@ function parseMarkdown(markdown) {
   
   // 处理段落和换行
   html = html.replace(/\n\n/g, '</p><p>');
-  html = html.replace(/^\s*$(.*)^\s*$/gm, '<p>$1</p>');
+  html = html.replace(/^(.+)$/gm, '<p>$1</p>');
   
   return html;
 }
