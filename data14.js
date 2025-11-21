@@ -1,0 +1,8 @@
+const mockData = [
+  {
+    "title": "状态管理方案",
+    "createdAt": 1705190400000,
+    "content": "## 状态管理方案\n\n状态管理用于管理应用中的共享状态，解决组件间数据共享和通信的问题。在大型应用中，合理的状态管理是保持代码可维护性的关键。\n\n### 常见方案\n\n#### 1. Redux\n- **特点**: 单一数据源，不可变更新，函数式编程\n- **核心概念**: Store、Action、Reducer\n- **适用场景**: 大型应用，需要时间旅行调试\n- **示例**:\n```javascript\n// Action\nconst increment = () => ({ type: 'INCREMENT' });\n\n// Reducer\nconst counter = (state = 0, action) => {\n  switch(action.type) {\n    case 'INCREMENT': return state + 1;\n    default: return state;\n  }\n};\n\n// Store\nconst store = createStore(counter);\n```\n\n#### 2. MobX\n- **特点**: 响应式状态管理，使用装饰器和观察者模式\n- **优势**: 学习曲线平缓，代码简洁\n- **适用场景**: 中小型应用，需要响应式更新\n\n#### 3. Vuex / Pinia\n- **Vuex**: Vue 2 的官方状态管理库\n- **Pinia**: Vue 3 推荐的状态管理库，更轻量\n- **特点**: 与 Vue 深度集成，支持模块化\n\n#### 4. Zustand\n- **特点**: 轻量级，API 简洁，无需 Provider\n- **优势**: 体积小，易于使用\n- **适用场景**: React 应用，需要简单状态管理\n\n#### 5. Context API（React）\n- React 内置的状态管理方案\n- 适合小规模状态共享\n- 配合 useReducer 可以管理复杂状态\n\n### 使用场景\n- **全局状态**: 用户信息、主题设置、语言配置\n- **组件间通信**: 跨层级组件数据传递\n- **数据持久化**: 本地存储、缓存管理\n- **异步状态**: API 请求状态、加载状态\n- **复杂业务逻辑**: 购物车、表单状态\n\n### Redux 三大原则\n1. **单一数据源**: 整个应用的状态存储在一个对象树中\n2. **状态只读**: 唯一改变 state 的方法就是触发 action\n3. **纯函数更新**: 使用纯函数（reducer）来描述状态如何更新\n\n### 状态管理选择建议\n- **小型应用**: Context API、Zustand\n- **中型应用**: Redux Toolkit、MobX\n- **大型应用**: Redux + 中间件（Redux-Saga、Redux-Thunk）\n- **Vue 应用**: Pinia（Vue 3）或 Vuex（Vue 2）\n\n### 最佳实践\n- 避免过度使用全局状态，优先使用组件本地状态\n- 保持状态扁平化，避免深层嵌套\n- 使用不可变更新，避免直接修改状态\n- 合理拆分状态模块，提高可维护性"
+  }
+];
+window.mockData = mockData;

@@ -43,7 +43,14 @@
   transition: background 0.3s;
   color: #000;
 }
-
+a {
+ display: block;
+  width: 100%;
+  height: 100%;
+  padding: 8px 12px;
+  margin: -8px -12px;
+  text-decoration: none;
+}
 .node:hover{
   background: #c1e3c1;
   cursor: pointer;

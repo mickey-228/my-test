@@ -6,20 +6,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const data = window.mockData;
   const catalogList = document.getElementById('catalog-list');
   
-  // 动态生成目录项
-  // data.forEach(item => { 
-  //   const node = document.createElement('li');
-  //   node.className = 'node';
-  //   node.textContent = item.title;
-  //   catalogList.appendChild(node);
-  // });
+  动态生成目录项
+  data.forEach(item => { 
+    const node = document.createElement('li');
+    node.className = 'node';
+    node.textContent = item.title;
+    catalogList.appendChild(node);
+  });
  
   const nodes = document.querySelectorAll('.node');
   const contentDisplayArea = document.querySelector('.content-display-area');
   const crumbsElement = document.querySelector('.crumbs');
   
   // 初始化第一个节点为选中状态
-  if(nodes.length >0){ 
+  if(nodes.length > 0){ 
     nodes[0].classList.add('active');
     crumbsElement.textContent = data[0].title;
     contentDisplayArea.innerHTML = parseMarkdown(data[0].content);
@@ -42,26 +42,12 @@ document.addEventListener('DOMContentLoaded', function () {
       tooltip.style.display = 'none';
     }); 
     
-    // node.addEventListener('click', function(e) { 
-    //   // e.preventDefault();
-    //   nodes.forEach(n => n.classList.remove('active'));
-    //   this.classList.add('active');
-    //   crumbsElement.textContent = data[index].title;
-    //   contentDisplayArea.innerHTML = parseMarkdown(data[index].content); 
-    // });
-    // 替换原有的 nodes.forEach 循环中的点击事件
-catalogList.addEventListener('click', function(e) {
-  const node = e.target.closest('.node');
-  if (node) {
-    e.preventDefault();
-    const index = Array.from(nodes).indexOf(node);
-    nodes.forEach(n => n.classList.remove('active'));
-    node.classList.add('active');
-    crumbsElement.textContent = data[index].title;
-    contentDisplayArea.innerHTML = parseMarkdown(data[index].content);
-  }
-});
-    
+    node.addEventListener('click', function() { 
+      nodes.forEach(n => n.classList.remove('active'));
+      this.classList.add('active');
+      crumbsElement.textContent = data[index].title;
+      contentDisplayArea.innerHTML = parseMarkdown(data[index].content); 
+    });
   });
 });
 
