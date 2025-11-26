@@ -1,8 +1,0 @@
-const mockData = [
-  {
-    "title": "跨域问题解决方案",
-    "createdAt": 1705017600000,
-    "content": "## 跨域问题解决方案\n\n跨域（Cross-Origin）是由于浏览器的同源策略（Same-Origin Policy）导致的限制。当协议、域名或端口不同时，浏览器会阻止跨域请求。\n\n### 同源策略\n同源是指协议、域名、端口三者完全相同。例如：\n- `https://example.com` 和 `http://example.com` - 协议不同，跨域\n- `https://example.com` 和 `https://api.example.com` - 域名不同，跨域\n- `https://example.com:80` 和 `https://example.com:443` - 端口不同，跨域\n\n### 解决方案\n\n#### 1. CORS（跨域资源共享）\n服务器设置响应头允许跨域：\n```\nAccess-Control-Allow-Origin: *  // 允许所有域名\nAccess-Control-Allow-Origin: https://example.com  // 允许特定域名\nAccess-Control-Allow-Methods: GET, POST, PUT\nAccess-Control-Allow-Headers: Content-Type\nAccess-Control-Allow-Credentials: true  // 允许携带 cookie\n```\n\n#### 2. JSONP\n利用 `<script>` 标签不受同源策略限制的特性：\n```javascript\nfunction jsonp(url, callback) {\n  const script = document.createElement('script');\n  script.src = `${url}?callback=${callback}`;\n  document.body.appendChild(script);\n}\n```\n**限制**: 只支持 GET 请求\n\n#### 3. 代理服务器\n开发环境使用代理，生产环境使用 Nginx 反向代理：\n```javascript\n// webpack devServer 配置\nproxy: {\n  '/api': {\n    target: 'http://localhost:3000',\n    changeOrigin: true\n  }\n}\n```\n\n#### 4. postMessage\n用于跨窗口、跨域通信：\n```javascript\n// 发送消息\nwindow.postMessage('data', 'https://target-origin.com');\n\n// 接收消息\nwindow.addEventListener('message', (event) => {\n  if (event.origin === 'https://target-origin.com') {\n    // 处理消息\n  }\n});\n```\n\n#### 5. document.domain\n适用于主域相同、子域不同的情况（已废弃）\n\n### 预检请求（Preflight）\n对于复杂请求，浏览器会先发送 OPTIONS 请求进行预检，服务器需要正确响应预检请求。\n\n### 注意事项\n- CORS 是最推荐的解决方案\n- JSONP 存在安全风险，已不推荐使用\n- 开发环境可以使用代理，生产环境建议使用 CORS"
-  }
-];
-window.mockData = mockData;
