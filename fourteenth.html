@@ -40,5 +40,33 @@
     </div>
   </div>
   <script src ="知识库.js"></script>
-  <script src="data14.js"></script>
+  <script src="data.js"></script>
+    <script>
+const data = window.mockData;
+ const nodes = document.querySelectorAll('.node');
+ nodes[14].classList.add('active');
+ const contentDisplayArea = document.querySelector('.content-display-area');
+contentDisplayArea.innerHTML = parseMarkdown(data[14].content);
+function parseMarkdown(markdown) { 
+  let html = markdown.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+  html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+  html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+  html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
+  
+  // 处理列表
+  html = html.replace(/^\- (.*$)/gim, '<li>$1</li>');
+  html = html.replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>');
+  
+  // 处理代码块
+  html = html.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
+  
+  // 处理粗体
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  
+  // 处理段落和换行
+  html = html.replace(/\n\n/g, '</p><p>');
+ html = html.replace(/^(.+)$/gm, '<p>$1</p>');
+  
+  return html;
+}</script>
 </html>
