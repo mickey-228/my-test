@@ -83,11 +83,8 @@ function parseMarkdown(markdown) {
   
   // 处理段落和换行
   html = html.replace(/\n\n/g, '</p><p>');
-<<<<<<< HEAD
  html = html.replace(/^(.+)$/gm, '<p>$1</p>');
-=======
   html = html.replace(/^(.+)$/gm, '<p>$1</p>');
->>>>>>> a9409d5fbe7a17a85a298cb90fbf9b1d3133a916
   
   return html;
 }
