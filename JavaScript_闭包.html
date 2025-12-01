@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 闭包</title>
+  <link rel="stylesheet" href="./惠惠惠的个人知识库.css">
+</head>
+<body> 
+<div class="bar">
+   <div class="logo-container">
+    <a class="logo">惠惠惠的个人知识库</a>
+  </div> 
+  </div>
+<div class="container">
+  <div class="catalog">
+    <div class="node"><a href="React_Hooks_基础.html">React Hooks 基础</a></div><div class="node"><a href="CSS_Flexbox_布局.html">CSS Flexbox 布局</a></div><div class="node active"><a href="JavaScript_闭包.html">JavaScript 闭包</a></div><div class="node"><a href="TypeScript_类型系统.html">TypeScript 类型系统</a></div><div class="node"><a href="Vue_响应式原理.html">Vue 响应式原理</a></div><div class="node"><a href="Webpack_打包原理.html">Webpack 打包原理</a></div><div class="node"><a href="ES6_模块化.html">ES6 模块化</a></div><div class="node"><a href="浏览器事件循环.html">浏览器事件循环</a></div><div class="node"><a href="HTTP_协议基础.html">HTTP 协议基础</a></div><div class="node"><a href="前端性能优化.html">前端性能优化</a></div><div class="node"><a href="虚拟_DOM_原理.html">虚拟 DOM 原理</a></div><div class="node"><a href="跨域问题解决方案.html">跨域问题解决方案</a></div><div class="node"><a href="前端路由实现.html">前端路由实现</a></div><div class="node"><a href="状态管理方案.html">状态管理方案</a></div><div class="node"><a href="前端安全防护.html">前端安全防护</a></div><div class="node"><a href="CSS_Grid_布局.html">CSS Grid 布局</a></div><div class="node"><a href="Promise_和异步编程.html">Promise 和异步编程</a></div><div class="node"><a href="JavaScript_原型链.html">JavaScript 原型链</a></div><div class="node"><a href="防抖和节流.html">防抖和节流</a></div><div class="node"><a href="CSS_变量_Custom_Properties.html">CSS 变量（Custom Properties）</a></div><div class="node"><a href="React_组件生命周期.html">React 组件生命周期</a></div><div class="node"><a href="Vue_组件通信.html">Vue 组件通信</a></div><div class="node"><a href="Babel_转译原理.html">Babel 转译原理</a></div><div class="node"><a href="ESLint_代码检查.html">ESLint 代码检查</a></div><div class="node"><a href="Git_工作流.html">Git 工作流</a></div><div class="node"><a href="CSS_Grid_布局_2.html">CSS Grid 布局 (2)</a></div><div class="node"><a href="Promise_和异步编程_2.html">Promise 和异步编程 (2)</a></div><div class="node"><a href="JavaScript_原型链_2.html">JavaScript 原型链 (2)</a></div><div class="node"><a href="防抖和节流_2.html">防抖和节流 (2)</a></div><div class="node"><a href="CSS_变量_Custom_Properties_2.html">CSS 变量（Custom Properties） (2)</a></div><div class="node"><a href="React_组件生命周期_2.html">React 组件生命周期 (2)</a></div><div class="node"><a href="Vue_组件通信_2.html">Vue 组件通信 (2)</a></div><div class="node"><a href="Babel_转译原理_2.html">Babel 转译原理 (2)</a></div><div class="node"><a href="ESLint_代码检查_2.html">ESLint 代码检查 (2)</a></div><div class="node"><a href="Git_工作流_2.html">Git 工作流 (2)</a></div><div class="node"><a href="CSS_Grid_布局_3.html">CSS Grid 布局 (3)</a></div><div class="node"><a href="Promise_和异步编程_3.html">Promise 和异步编程 (3)</a></div><div class="node"><a href="JavaScript_原型链_3.html">JavaScript 原型链 (3)</a></div><div class="node"><a href="防抖和节流_3.html">防抖和节流 (3)</a></div><div class="node"><a href="CSS_变量_Custom_Properties_3.html">CSS 变量（Custom Properties） (3)</a></div><div class="node"><a href="React_组件生命周期_3.html">React 组件生命周期 (3)</a></div><div class="node"><a href="Vue_组件通信_3.html">Vue 组件通信 (3)</a></div><div class="node"><a href="Babel_转译原理_3.html">Babel 转译原理 (3)</a></div><div class="node"><a href="ESLint_代码检查_3.html">ESLint 代码检查 (3)</a></div><div class="node"><a href="Git_工作流_3.html">Git 工作流 (3)</a></div><div class="node"><a href="CSS_Grid_布局_4.html">CSS Grid 布局 (4)</a></div><div class="node"><a href="Promise_和异步编程_4.html">Promise 和异步编程 (4)</a></div><div class="node"><a href="JavaScript_原型链_4.html">JavaScript 原型链 (4)</a></div><div class="node"><a href="防抖和节流_4.html">防抖和节流 (4)</a></div><div class="node"><a href="CSS_变量_Custom_Properties_4.html">CSS 变量（Custom Properties） (4)</a></div><div class="node"><a href="React_组件生命周期_4.html">React 组件生命周期 (4)</a></div><div class="node"><a href="Vue_组件通信_4.html">Vue 组件通信 (4)</a></div><div class="node"><a href="Babel_转译原理_4.html">Babel 转译原理 (4)</a></div><div class="node"><a href="ESLint_代码检查_4.html">ESLint 代码检查 (4)</a></div><div class="node"><a href="Git_工作流_4.html">Git 工作流 (4)</a></div><div class="node"><a href="CSS_Grid_布局_5.html">CSS Grid 布局 (5)</a></div><div class="node"><a href="Promise_和异步编程_5.html">Promise 和异步编程 (5)</a></div><div class="node"><a href="JavaScript_原型链_5.html">JavaScript 原型链 (5)</a></div><div class="node"><a href="防抖和节流_5.html">防抖和节流 (5)</a></div><div class="node"><a href="CSS_变量_Custom_Properties_5.html">CSS 变量（Custom Properties） (5)</a></div><div class="node"><a href="React_组件生命周期_5.html">React 组件生命周期 (5)</a></div><div class="node"><a href="Vue_组件通信_5.html">Vue 组件通信 (5)</a></div><div class="node"><a href="Babel_转译原理_5.html">Babel 转译原理 (5)</a></div><div class="node"><a href="ESLint_代码检查_5.html">ESLint 代码检查 (5)</a></div><div class="node"><a href="Git_工作流_5.html">Git 工作流 (5)</a></div><div class="node"><a href="CSS_Grid_布局_6.html">CSS Grid 布局 (6)</a></div><div class="node"><a href="Promise_和异步编程_6.html">Promise 和异步编程 (6)</a></div><div class="node"><a href="JavaScript_原型链_6.html">JavaScript 原型链 (6)</a></div><div class="node"><a href="防抖和节流_6.html">防抖和节流 (6)</a></div><div class="node"><a href="CSS_变量_Custom_Properties_6.html">CSS 变量（Custom Properties） (6)</a></div><div class="node"><a href="React_组件生命周期_6.html">React 组件生命周期 (6)</a></div><div class="node"><a href="Vue_组件通信_6.html">Vue 组件通信 (6)</a></div><div class="node"><a href="Babel_转译原理_6.html">Babel 转译原理 (6)</a></div><div class="node"><a href="ESLint_代码检查_6.html">ESLint 代码检查 (6)</a></div><div class="node"><a href="Git_工作流_6.html">Git 工作流 (6)</a></div><div class="node"><a href="CSS_Grid_布局_7.html">CSS Grid 布局 (7)</a></div><div class="node"><a href="Promise_和异步编程_7.html">Promise 和异步编程 (7)</a></div><div class="node"><a href="JavaScript_原型链_7.html">JavaScript 原型链 (7)</a></div><div class="node"><a href="防抖和节流_7.html">防抖和节流 (7)</a></div><div class="node"><a href="CSS_变量_Custom_Properties_7.html">CSS 变量（Custom Properties） (7)</a></div><div class="node"><a href="React_组件生命周期_7.html">React 组件生命周期 (7)</a></div><div class="node"><a href="Vue_组件通信_7.html">Vue 组件通信 (7)</a></div><div class="node"><a href="Babel_转译原理_7.html">Babel 转译原理 (7)</a></div><div class="node"><a href="ESLint_代码检查_7.html">ESLint 代码检查 (7)</a></div><div class="node"><a href="Git_工作流_7.html">Git 工作流 (7)</a></div><div class="node"><a href="CSS_Grid_布局_8.html">CSS Grid 布局 (8)</a></div><div class="node"><a href="Promise_和异步编程_8.html">Promise 和异步编程 (8)</a></div><div class="node"><a href="JavaScript_原型链_8.html">JavaScript 原型链 (8)</a></div><div class="node"><a href="防抖和节流_8.html">防抖和节流 (8)</a></div><div class="node"><a href="CSS_变量_Custom_Properties_8.html">CSS 变量（Custom Properties） (8)</a></div><div class="node"><a href="React_组件生命周期_8.html">React 组件生命周期 (8)</a></div><div class="node"><a href="Vue_组件通信_8.html">Vue 组件通信 (8)</a></div><div class="node"><a href="Babel_转译原理_8.html">Babel 转译原理 (8)</a></div><div class="node"><a href="ESLint_代码检查_8.html">ESLint 代码检查 (8)</a></div><div class="node"><a href="Git_工作流_8.html">Git 工作流 (8)</a></div><div class="node"><a href="CSS_Grid_布局_9.html">CSS Grid 布局 (9)</a></div><div class="node"><a href="Promise_和异步编程_9.html">Promise 和异步编程 (9)</a></div><div class="node"><a href="JavaScript_原型链_9.html">JavaScript 原型链 (9)</a></div><div class="node"><a href="防抖和节流_9.html">防抖和节流 (9)</a></div><div class="node"><a href="CSS_变量_Custom_Properties_9.html">CSS 变量（Custom Properties） (9)</a></div>
+  </div>
+  <div class="content">
+    <div class="content-display-area">
+      <h1>JavaScript 闭包</h1>
+      <div class="content-main">
+        <h2>闭包（Closure）</h2><p>闭包是指函数能够访问其外部作用域中的变量，即使外部函数已经执行完毕。这是 JavaScript 中一个非常重要的概念，它允许函数"记住"并访问其词法作用域中的变量。</p><h3>特点</h3>
+<ul><li>函数嵌套：内部函数定义在外部函数内部</li></ul>
+<ul><li>内部函数引用外部变量：内部函数可以访问外部函数的变量和参数</li></ul>
+<ul><li>持久化作用域：外部函数执行后，其作用域链仍然被内部函数引用，不会被垃圾回收</li></ul><h3>工作原理</h3>
+<p>当函数被创建时，它会保存其词法环境（lexical environment），包括所有可访问的变量。即使外部函数执行完毕，只要内部函数仍然存在引用，外部函数的作用域就不会被销毁。</p><h3>应用场景</h3>
+<ul><li><strong>数据私有化</strong>: 创建私有变量，避免全局污染</li></ul>
+<ul><li><strong>模块化编程</strong>: 实现模块模式，封装功能</li></ul>
+<ul><li><strong>函数工厂</strong>: 创建具有特定配置的函数</li></ul>
+<ul><li><strong>回调函数</strong>: 在异步操作中保持上下文</li></ul>
+<ul><li><strong>防抖节流</strong>: 保存定时器 ID 等状态</li></ul><h3>示例</h3>
+<pre><code>function createCounter() {</p>
+<p>  let count = 0; // 私有变量</p>
+<p>  return function() {</p>
+<p>    return ++count;</p>
+<p>  };</p>
+<p>}</p>
+<p>const counter = createCounter();</p>
+<p>console.log(counter()); // 1</p>
+<p>console.log(counter()); // 2</code></pre><h3>注意事项</h3>
+<ul><li>闭包可能导致内存泄漏，如果不再需要应解除引用</li></ul>
+<ul><li>在循环中创建闭包时要注意变量捕获问题</li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="知识库.js"></script>
+</body>
+</html>
