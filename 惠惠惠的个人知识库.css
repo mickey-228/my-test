@@ -43,16 +43,25 @@
   transition: background 0.3s;
   color: #000;
 }
+<<<<<<< HEAD
  a {
+=======
+a {
+>>>>>>> 42663d1814ab324eccdaeb7d302887f4fa03ab42
  display: block;
   width: 100%;
   height: 100%;
   padding: 8px 12px;
   margin: -8px -12px;
   text-decoration: none;
+<<<<<<< HEAD
   color: #333;
 }
 .node :hover{
+=======
+}
+.node:hover{
+>>>>>>> 42663d1814ab324eccdaeb7d302887f4fa03ab42
   background: #c1e3c1;
   cursor: pointer;
   position: relative;
@@ -77,12 +86,15 @@
   font-weight: bold;
   border-left: 4px solid #f3e9d2;
 }
+<<<<<<< HEAD
 /* .node a:target {
   background-color: #ffcad4;
   color: white;
   font-weight: bold;
   border-left: 4px solid #f3e9d2;
 } */
+=======
+>>>>>>> 42663d1814ab324eccdaeb7d302887f4fa03ab42
 
 .content{
   flex:1;
